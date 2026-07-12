@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+
+# Переменные окружения
+.env
+
+# WebStorm
+.idea/
+*.iml
+
+# macOS
+.DS_Store

@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&family=Jost:wght@200;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <title>От и До</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <a href="#home" class="header__logo-link">
+                <img src="assets/images/logo.png" class="header__logo" alt="Автосервис От и До">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#service">Услуги</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contacts" class="header__btn">
+                Записаться в сервис
+            </a>
+
+            <button class="menu-toggle" type="button"
+                    aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__content">
+
+                    <h1>
+                        Автосервис <span class="nowrap">От и До</span>
+                    </h1>
+
+                    <p>
+                        Слесарные работы, шиномонтаж, компьютерная диагностика, эвакуатор, автомойка, запчасти на заказ,
+                        диски и шины
+                    </p>
+
+                    <div class="hero__btns">
+                        <a href="#contacts" class="hero__serv-btn">
+                            Записаться в сервис
+                        </a>
+
+                        <a href="#consultation" class="hero__cons-btn">
+                            Консультация
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__advantages">
+
+                    <div class="advantage">
+                        <img src="./assets/images/rocket.svg" alt="Быстрый ремонт">
+                        <div class="content">
+                            <h3>
+                                Быстрый ремонт
+                            </h3>
+                            <p>
+                                Найдем и устраним неисправность в кратчайшие сроки.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="advantage">
+                        <img src="./assets/images/star.svg" alt="Гарантия качества">
+                        <div class="content">
+                            <h3>
+                                Гарантия качества
+                            </h3>
+                            <p>
+                                Используем проверенные запчасти и даем гарантию на все работы.
+
+                                <span>С нами — спокойно.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="advantage">
+                        <img src="./assets/images/repair.svg" alt="Опытные мастера">
+                        <div class="content">
+                            <h3>
+                                Опытные мастера
+                            </h3>
+                            <p>
+                                Специалисты с опытом от 5 лет.Знаем особенности разных марок авто.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="service" id="service">
+        <div class="container">
+            <div class="service__inner">
+                <h2 class="service__title">
+                    Наши услуги
+                </h2>
+
+                <div class="service__list">
+
+                    <div class="service__card">
+
+                    <span class="service__number">
+                        01
+                    </span>
+
+                        <div class="service__content">
+                            <h3 class="service__subtitle">
+                                Комплексная
+                                диагностика
+                            </h3>
+
+                            <p class="service__text">
+                                <span>Выявим все неисправности за 30 минут.</span>
+                                <span> Точный расчет стоимости ремонта </span>
+                            </p>
+
+                        </div>
+
+                        <img src="./assets/images/сar.png" alt="Машина" class="service__img">
+
+                    </div>
+
+                    <div class="service__card">
+
+                    <span class="service__number">
+                        02
+                    </span>
+                        <div class="service__content">
+                            <h3 class="service__subtitle">
+                                Слесарные
+                                работы
+                            </h3>
+
+                            <p class="service__text">
+                                От замены колодок до капитального ремонта двигателя
+                            </p>
+                        </div>
+
+                        <img src="./assets/images/wrench.png" alt="Инструменты" class="service__img">
+
+                    </div>
+
+                    <div class="service__card">
+
+                    <span class="service__number">
+                        03
+                    </span>
+
+                        <div class="service__content">
+                            <h3 class="service__subtitle">
+                                Шиномонтаж
+                            </h3>
+
+                            <p class="service__text">
+                                Смена и балансировка от 30 минут
+                            </p>
+                        </div>
+
+                        <img src="./assets/images/tier.png" alt="Колесо" class="service__img">
+
+                    </div>
+
+                    <div class="service__card">
+
+                    <span class="service__number">
+                        04
+                    </span>
+
+                        <div class="service__content">
+                            <h3 class="service__subtitle">
+                                Эвакуатор
+                            </h3>
+
+                            <p class="service__text">
+                                Круглосуточный эвакуатор по городу и области.
+                                Приедем за 30 минут!
+                            </p>
+                        </div>
+
+
+                        <img src="./assets/images/tow_track.png" alt="Эвакуатор" class="service__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultation" id="consultation">
+        <div class="container">
+            <div class="consultation__inner">
+
+                <div class="consultation__content">
+
+                    <div class="consultation__block">
+                        <h2 class="consultation__title">
+                            Не знаете что
+                            с вашим авто?
+                        </h2>
+
+                        <p class="consultation__text">
+                            Мы подскажем! Заполните заявку
+                            и мы свяжемся с Вами в течение 15 минут
+                        </p>
+                    </div>
+
+                    <form class="consultation__body" id="consultationForm">
+
+                        <div class="consultation__inputs">
+                            <input type="text" name="name" placeholder="Ваше имя" required class="consultation__input">
+                            <input type="tel" name="phone" placeholder="Номер телефона" required
+                                   class="consultation__input">
+                            <input type="text" name="comment" placeholder="Комментарий (не обязательно)"
+                                   class="consultation__input">
+                            <input
+                                    type="text"
+                                    name="website"
+                                    class="honeypot"
+                                    autocomplete="off"
+                                    tabindex="-1">
+                        </div>
+
+                        <button class="consultation__btn" type="submit">
+                            Закажите бесплатную консультацию
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="consultation__img">
+                    <img src="./assets/images/master.png" alt="Мастер">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <div class="team__inner">
+
+                <h2 class="team__title">
+                    Наша команда
+                </h2>
+
+                <div class="swiper team__slider">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="team__item">
+                                <img src="./assets/images/master_1.jpg" alt="Олег Самойлов" class="team__img">
+                                <h3 class="team__name">Олег Самойлов</h3>
+                                <p class="team__role">Механик</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="team__item">
+                                <img src="./assets/images/master_2.jpg" alt="Александр Зотов" class="team__img">
+                                <h3 class="team__name">Александр Зотов</h3>
+                                <p class="team__role">Электрик - диагност</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="team__item">
+                                <img src="./assets/images/master_1.jpg" alt="Олег Самойлов" class="team__img">
+                                <h3 class="team__name">Олег Самойлов</h3>
+                                <p class="team__role">Механик</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="team__item">
+                                <img src="./assets/images/master_3.jpg" alt="Кирилл Иванов" class="team__img">
+                                <h3 class="team__name">Кирилл Иванов</h3>
+                                <p class="team__role">Диагност - моторист</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team__button-next swiper-button-next"></div>
+                    <div class="team__button-prev swiper-button-prev"></div>
+                    <div class="team__pagination swiper-pagination"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="reasons" id="reasons">
+        <div class="container">
+            <div class="reasons__inner">
+
+                <div class="reasons__up">
+                    <h2 class="reasons__title">Почему мы?</h2>
+                    <p class="reasons__angle-text">Команда с опытом более 10 лет. Обслуживаем машины так, как обслуживали бы
+                        свои
+                    </p>
+                </div>
+
+                <div class="reasons__list">
+
+                    <div class="reasons__card reasons__first">
+                        <span class="reasons__card-number">01</span>
+                        <div class="reasons__card-content">
+                            <h3 class="reasons__card-title">Точная <br> диагностика</h3>
+                            <p class="reasons__card-text">Мы находим корень проблемы, а не просто устраняем симптомы.</p>
+                        </div>
+                    </div>
+
+                    <div class="reasons__card reasons__second">
+                        <span class="reasons__card-number">02</span>
+                        <div class="reasons__card-content">
+                            <h3 class="reasons__card-title">Прозрачность на всех этапах</h3>
+                            <p class="reasons__card-text">Согласовываем каждый этап ремонта и не делаем лишних работ без
+                                вашего
+                                одобрения.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reasons__card reasons__third">
+                        <span class="reasons__card-number">03</span>
+                        <div class="reasons__card-content">
+                            <h3 class="reasons__card-title">Специализация на вашей технике</h3>
+                            <p class="reasons__card-text">У нас узкопрофильные мастера, которые досконально знают конкретные
+                                бренды и модели.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="comments" id="reviews">
+
+        <div class="container">
+
+            <div class="swiper comments__slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-2.jpg" alt="Землин Андрей" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">
+                                        Землин Андрей
+                                    </p>
+                                    <p class="comments__date">
+                                        07.05.2025
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="comments__text">
+                                Приехал на диагностику. Быстро определили причину выхода из строя
+                                одного из цилиндров в двигателе и взялись за работу.
+                            </p>
+                            <p class="comments__reason">
+                                Диагностика мотора
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-1.jpg" alt="Артём Степанов" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">
+                                        Артём Степанов
+                                    </p>
+                                    <p class="comments__date">
+                                        12.09.2025
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="comments__text">
+                                Все четко. Записался через сайт. Через час был на месте. Сработали отлично - без лишних
+                                разговоров.
+                            </p>
+                            <p class="comments__reason">
+                                Шаровая опора
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-2.jpg" alt="Землин Андрей" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">
+                                        Землин Андрей
+                                    </p>
+                                    <p class="comments__date">
+                                        07.05.2025
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="comments__text">
+                                Приехал на диагностику. Быстро определили причину выхода из строя
+                                одного из цилиндров в двигателе и взялись за работу.
+                            </p>
+                            <p class="comments__reason">
+                                Диагностика мотора
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-3.jpg" alt="Ишимов Никита" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">Ишимов Никита</p>
+                                    <p class="comments__date">13.11.2025</p>
+                                </div>
+                            </div>
+                            <p class="comments__text">Оставил заявку на сайте.
+                                Ответили уже через 7 минут
+                                Поменяли коробку передач,
+                                теперь летаю бодро!)</p>
+                            <p class="comments__reason">Ремонт МКП</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-4.jpg" alt="Вечканов Вадим" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">Вечканов Вадим</p>
+                                    <p class="comments__date">22.02.2025</p>
+                                </div>
+                            </div>
+                            <p class="comments__text">Заскрипела подвеска на моем старом немце, и решил что пора заехать в
+                                сервис. Я сам в машинах ничего не понимаю, но ребята в сервисе все доступно рассказали!</p>
+                            <p class="comments__reason">Ремонт подвески</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="comments__block">
+                            <div class="comments__head">
+                                <img src="./assets/images/cmnt-3.jpg" alt="Ишимов Никита" class="comments__img">
+                                <div class="comments__info">
+                                    <p class="comments__name">Ишимов Никита</p>
+                                    <p class="comments__date">13.11.2025</p>
+                                </div>
+                            </div>
+                            <p class="comments__text">Оставил заявку на сайте.
+                                Ответили уже через 7 минут
+                                Поменяли коробку передач,
+                                теперь летаю бодро!)</p>
+                            <p class="comments__reason">Ремонт МКП</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comments__button-next swiper-button-next"></div>
+                <div class="comments__button-prev swiper-button-prev"></div>
+                <div class="comments__pagination swiper-pagination"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq__inner">
+
+                <div class="faq__top">
+                    <h2 class="faq__title">Вопросы/ответы</h2>
+                    <span class="faq__subtitle">FAQ</span>
+                </div>
+
+                <div class="faq__content">
+
+                    <div class="faq__column">
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">01</span>
+                                    <p class="faq__text">Сколько часов занимает ремонт?</p>
+                                </div>
+                                <button type="button" class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Обычно ремонт занимает
+                                от 2 до 6 часов
+                                в зависимости от сложности.
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">02</span>
+                                    <p class="faq__text">Какие гарантии на работу?</p>
+                                </div>
+                                <button class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Мы предоставляем гарантию на все выполненные работы
+                                и установленные запчасти до 12 месяцев.
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">03</span>
+                                    <p class="faq__text">Сколько это будет стоить?</p>
+                                </div>
+                                <button class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Стоимость зависит от типа неисправности. После диагностики мы согласовываем
+                                точную цену до начала ремонта.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="faq__column">
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">04</span>
+                                    <p class="faq__text">Есть ли эвакуация авто?</p>
+                                </div>
+                                <button class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Да, у нас работает круглосуточный эвакуатор по городу и области.
+                                Приедем максимально быстро.
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">05</span>
+                                    <p class="faq__text">Вы работаете на выходных?</p>
+                                </div>
+                                <button class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Да, мы работаем без выходных, чтобы вы могли обратиться в удобное для вас время.
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <div class="faq__top">
+                                <div class="faq__left">
+                                    <span class="faq__number">06</span>
+                                    <p class="faq__text">У вас есть зона ожидания?</p>
+                                </div>
+                                <button class="faq__button">+</button>
+                            </div>
+                            <div class="faq__answer">
+                                Да, у нас есть комфортная зона ожидания с Wi-Fi, кофе и удобными местами для отдыха.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts__inner">
+                <h2 class="contacts__title">Ваш автомобиль <br> заслуживает <br> лучшего </h2>
+                <p class="contacts__text">Договоритесь о сервисе на удобный для вас час - остальное мы возьмем на
+                    себя
+                </p>
+                <form class="contacts__form" id="serviceForm">
+                    <div class="contacts__inputs">
+                        <input type="text" name="name" placeholder="Ваше имя" class="contacts__input" required>
+                        <input type="tel" name="phone" placeholder="Номер телефона" class="contacts__input" required>
+                        <input type="text" name="comment" placeholder="Комментарий (не обязательно)"
+                               class="contacts__input">
+                        <input
+                                type="text"
+                                name="website"
+                                class="honeypot"
+                                autocomplete="off"
+                                tabindex="-1">
+                    </div>
+                    <button type="submit" class="contacts__btn">Закажите бесплатную консультацию</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__up">
+                    <div class="footer__left">
+
+                        <p class="footer__name">От и До Автосервис</p>
+
+                        <div class="footer__block">
+                            <div class="footer__item">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.7917 24.8333C19.4421 24.8333 24.8333 19.4421 24.8333 12.7917C24.8333 6.14124 19.4421 0.75 12.7917 0.75C6.14124 0.75 0.75 6.14124 0.75 12.7917C0.75 19.4421 6.14124 24.8333 12.7917 24.8333Z"
+                                          stroke="white" stroke-width="1.5"/>
+                                    <path d="M19.168 12.7918H13.1471C13.0532 12.7918 12.9631 12.7545 12.8967 12.6881C12.8303 12.6217 12.793 12.5316 12.793 12.4377V7.8335"
+                                          stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+
+                                <p class="footer__info">Пн-Сб: 9:00 - 18:00</p>
+                            </div>
+
+                            <div class="footer__item">
+                                <svg width="20" height="25" viewBox="0 0 20 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M3.79294 3.80531C4.55678 3.03568 5.46531 2.42473 6.46622 2.00763C7.46713 1.59054 8.54066 1.37553 9.625 1.375C11.8113 1.375 13.9095 2.24812 15.4571 3.80531C17.0067 5.3669 17.8759 7.47796 17.875 9.67794C17.875 13.4771 15.7685 16.9159 13.574 19.4549C12.6492 20.5197 11.6466 21.5142 10.5744 22.4304C10.2644 22.6962 9.94782 22.9543 9.625 23.2045C9.30235 22.9541 8.98578 22.696 8.67556 22.4304C7.60337 21.5142 6.60076 20.5197 5.676 19.4549C3.4815 16.9159 1.375 13.4771 1.375 9.67794C1.375 7.4745 2.24538 5.3625 3.79294 3.80531ZM9.229 24.6242L9.625 24.0625L10.021 24.6242C9.9051 24.7059 9.76678 24.7497 9.625 24.7497C9.48322 24.7497 9.3449 24.7059 9.229 24.6242ZM9.229 24.6242L9.625 24.0625L10.021 24.6242L10.0238 24.6228L10.0306 24.618L10.0513 24.6022L10.1324 24.5438C10.202 24.4929 10.3006 24.4186 10.428 24.321C10.681 24.1271 11.0399 23.8418 11.4682 23.4754C12.5925 22.5144 13.6439 21.4711 14.6135 20.3541C16.8878 17.7237 19.25 13.97 19.25 9.67725C19.25 7.11287 18.2366 4.65163 16.4326 2.83663C15.541 1.93827 14.4805 1.22515 13.3122 0.738321C12.1438 0.251492 10.8907 0.00056966 9.625 0C8.35934 0.000479608 7.10627 0.251294 5.93793 0.738004C4.76959 1.22471 3.70905 1.93771 2.81738 2.83594C1.01179 4.65521 -0.000987875 7.11476 7.23063e-07 9.67794C7.23063e-07 13.97 2.36225 17.7237 4.6365 20.3541C5.60613 21.4711 6.65746 22.5144 7.78181 23.4754C8.21081 23.8418 8.569 24.1271 8.822 24.321C8.94611 24.4166 9.07148 24.5106 9.19806 24.6029L9.22006 24.618L9.22625 24.6228L9.229 24.6242ZM6.875 9.625C6.875 8.89565 7.16473 8.19618 7.68046 7.68046C8.19618 7.16473 8.89566 6.875 9.625 6.875C10.3543 6.875 11.0538 7.16473 11.5695 7.68046C12.0853 8.19618 12.375 8.89565 12.375 9.625C12.375 10.3543 12.0853 11.0538 11.5695 11.5695C11.0538 12.0853 10.3543 12.375 9.625 12.375C8.89566 12.375 8.19618 12.0853 7.68046 11.5695C7.16473 11.0538 6.875 10.3543 6.875 9.625ZM9.625 5.5C8.53098 5.5 7.48177 5.9346 6.70818 6.70818C5.9346 7.48177 5.5 8.53098 5.5 9.625C5.5 10.719 5.9346 11.7682 6.70818 12.5418C7.48177 13.3154 8.53098 13.75 9.625 13.75C10.719 13.75 11.7682 13.3154 12.5418 12.5418C13.3154 11.7682 13.75 10.719 13.75 9.625C13.75 8.53098 13.3154 7.48177 12.5418 6.70818C11.7682 5.9346 10.719 5.5 9.625 5.5Z"
+                                          fill="white"/>
+                                </svg>
+
+                                <p class="footer__info">Ул. Чапаева, 15/1, Ногинск</p>
+                            </div>
+
+                            <div class="footer__item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.875 23.75C22.3723 23.75 22.8492 23.5525 23.2008 23.2008C23.5525 22.8492 23.75 22.3723 23.75 21.875V17.5C23.75 17.0027 23.5525 16.5258 23.2008 16.1742C22.8492 15.8225 22.3723 15.625 21.875 15.625C20.4125 15.625 18.975 15.4 17.6 14.9375C17.2713 14.8337 16.9204 14.822 16.5854 14.9035C16.2505 14.985 15.9443 15.1568 15.7 15.4L13.9 17.2C10.7903 15.503 8.23448 12.9472 6.5375 9.8375L8.325 8.05C8.8375 7.5625 9.025 6.8375 8.8 6.1375C8.35 4.775 8.125 3.3375 8.125 1.875C8.125 1.37772 7.92746 0.900806 7.57583 0.549175C7.22419 0.197544 6.74728 0 6.25 0H1.875C1.37772 0 0.900806 0.197544 0.549175 0.549175C0.197544 0.900806 0 1.37772 0 1.875C0 13.9375 9.8125 23.75 21.875 23.75ZM1.875 1.25H6.25C6.41576 1.25 6.57473 1.31585 6.69194 1.43306C6.80915 1.55027 6.875 1.70924 6.875 1.875C6.875 3.475 7.125 5.0375 7.6125 6.525C7.675 6.7 7.6625 6.95 7.4625 7.15L5 9.6C7.0625 13.6375 10.0875 16.6625 14.1375 18.75L16.575 16.2875C16.75 16.1125 16.9875 16.0625 17.2125 16.125C18.7125 16.625 20.275 16.875 21.875 16.875C22.0408 16.875 22.1997 16.9408 22.3169 17.0581C22.4342 17.1753 22.5 17.3342 22.5 17.5V21.875C22.5 22.0408 22.4342 22.1997 22.3169 22.3169C22.1997 22.4342 22.0408 22.5 21.875 22.5C10.5 22.5 1.25 13.25 1.25 1.875C1.25 1.70924 1.31585 1.55027 1.43306 1.43306C1.55027 1.31585 1.70924 1.25 1.875 1.25Z"
+                                          fill="white"/>
+                                </svg>
+
+                                <p class="footer__info">+7 958 100 10 10</p>
+                            </div>
+
+                            <div class="footer__item">
+                                <svg width="25" height="20" viewBox="0 0 25 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.222 19.25C1.58858 19.25 1.06013 19.0383 0.636625 18.6148C0.213125 18.1913 0.000916667 17.6623 0 17.028V2.222C0 1.58858 0.212208 1.06012 0.636625 0.636625C1.06104 0.213125 1.58904 0.000916667 2.22062 0H22.5294C23.1619 0 23.6899 0.212208 24.1134 0.636625C24.5369 1.06104 24.7491 1.5895 24.75 2.222V17.0294C24.75 17.6619 24.5378 18.1903 24.1134 18.6148C23.689 19.0392 23.161 19.2509 22.5294 19.25H2.222ZM23.375 2.59188L12.991 9.38988C12.8938 9.44029 12.7958 9.48292 12.6968 9.51775C12.5968 9.55167 12.4896 9.56863 12.375 9.56863C12.2604 9.56863 12.1532 9.55167 12.0532 9.51775C11.9533 9.48383 11.8553 9.44121 11.759 9.38988L1.375 2.5905V17.028C1.375 17.2755 1.45429 17.4785 1.61287 17.6371C1.77146 17.7957 1.9745 17.875 2.222 17.875H22.5294C22.776 17.875 22.9785 17.7957 23.1371 17.6371C23.2957 17.4785 23.375 17.2755 23.375 17.028V2.59188ZM12.375 8.25L22.9515 1.375H1.7985L12.375 8.25ZM1.375 2.882V1.76687V1.81362V1.375V1.815V1.7435V2.882Z"
+                                          fill="white"/>
+                                </svg>
+
+                                <p class="footer__info">otidoautoserv@mail.ru</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <svg width="57" height="47" viewBox="0 0 57 47" xmlns="http://www.w3.org/2000/svg"
+                         class="footer__arrow">
+                        <path d="M1.00001 0C0.447728 -6.79493e-06 6.79493e-06 0.447703 0 0.999988C-6.79493e-06 1.55227 0.447703 1.99999 0.999988 2L1 1L1.00001 0ZM56.7071 39.626C57.0976 39.2354 57.0976 38.6023 56.7071 38.2118L50.3432 31.8478C49.9526 31.4573 49.3195 31.4573 48.929 31.8478C48.5384 32.2383 48.5384 32.8715 48.9289 33.262L54.5858 38.9189L48.9289 44.5757C48.5384 44.9662 48.5384 45.5994 48.9289 45.9899C49.3194 46.3804 49.9526 46.3804 50.3431 45.9899L56.7071 39.626ZM1 1L0.999988 2C7.5302 2.00008 12.4245 2.41033 16.0992 3.2695C19.766 4.12683 22.1455 5.41424 23.7316 7.11693C25.3159 8.8178 26.2074 11.039 26.6936 13.962C27.1826 16.9018 27.2477 20.4552 27.2477 24.7626H28.2477H29.2477C29.2477 20.4752 29.1867 16.761 28.6665 13.6338C28.1435 10.4898 27.1428 7.84479 25.195 5.75375C23.249 3.66452 20.4565 2.23435 16.5545 1.32202C12.6604 0.411548 7.58907 8.11815e-05 1.00001 0L1 1ZM28.2477 24.7626H27.2477C27.2477 28.8868 27.855 31.9934 29.1596 34.2943C30.488 36.6369 32.479 38.0398 35.0029 38.8598C37.4858 39.6664 40.5127 39.919 43.9821 39.9823C47.4372 40.0453 51.5129 39.9188 56 39.9189L56 38.9189L56 37.9189C51.4046 37.9188 47.47 38.0455 44.0185 37.9826C40.5813 37.9199 37.8054 37.6674 35.6209 36.9576C33.4775 36.2613 31.9363 35.1364 30.8994 33.3078C29.8388 31.4373 29.2477 28.7291 29.2477 24.7626H28.2477Z"
+                              fill="rgba(255, 255, 255, 1)" fill-opacity="0.7"/>
+                    </svg>
+
+                    <div class="footer__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b0e5aac9742f6ef6b274b9c2b3b66bc6310c83ba11b95f61c8cda9967729703&amp;source=constructor"
+                                width="410" height="240" ></iframe>
+                    </div>
+
+                    <div class="footer__social">
+                        <p class="footer__social-title">Подписаться на <br> наши соцсети</p>
+                        <div class="footer__social-list">
+                            <a href="https://t.me/otidocompany"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="TG"
+                            >
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.4167 0C9.14667 0 0 9.14667 0 20.4167C0 31.6867 9.14667 40.8333 20.4167 40.8333C31.6867 40.8333 40.8333 31.6867 40.8333 20.4167C40.8333 9.14667 31.6867 0 20.4167 0ZM29.89 13.8833C29.5837 17.1092 28.2567 24.9492 27.5829 28.5629C27.2971 30.0942 26.7254 30.6046 26.1946 30.6658C25.0104 30.7679 24.1121 29.89 22.9688 29.1346C21.1721 27.9504 20.1513 27.2154 18.4158 26.0721C16.3946 24.745 17.7013 24.01 18.865 22.8258C19.1712 22.5196 24.3979 17.7625 24.5 17.3337C24.5142 17.2688 24.5123 17.2014 24.4945 17.1374C24.4767 17.0733 24.4436 17.0146 24.3979 16.9663C24.2754 16.8642 24.1121 16.905 23.9692 16.9254C23.7854 16.9663 20.9271 18.865 15.3533 22.6217C14.5367 23.1729 13.8017 23.4587 13.1483 23.4383C12.4133 23.4179 11.025 23.03 9.98375 22.6829C8.6975 22.2746 7.69708 22.05 7.77875 21.3354C7.81958 20.9679 8.33 20.6004 9.28958 20.2125C15.2513 17.6196 19.2121 15.9046 21.1925 15.0879C26.8683 12.7196 28.0321 12.3112 28.8079 12.3112C28.9713 12.3112 29.3592 12.3521 29.6042 12.5562C29.8083 12.7196 29.8696 12.9442 29.89 13.1075C29.8696 13.23 29.9104 13.5975 29.89 13.8833Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://vk.com/carserviceotido"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="VK"
+                            >
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.625 2.625C4.96705e-07 5.275 0 9.5125 0 18V19.5C0 27.975 4.96705e-07 32.2125 2.625 34.875C5.275 37.5 9.5125 37.5 18 37.5H19.5C27.975 37.5 32.2125 37.5 34.875 34.875C37.5 32.225 37.5 27.9875 37.5 19.5V18C37.5 9.525 37.5 5.2875 34.875 2.625C32.225 4.96705e-07 27.9875 0 19.5 0H18C9.525 0 5.2875 4.96705e-07 2.625 2.625ZM6.325 11.4125H10.625C10.7625 18.5625 13.9125 21.5875 16.4125 22.2125V11.4125H20.45V17.575C22.9125 17.3125 25.5125 14.5 26.3875 11.4H30.4125C30.0841 13.0046 29.4284 14.5243 28.4864 15.8642C27.5444 17.2041 26.3363 18.3354 24.9375 19.1875C26.4988 19.9643 27.8777 21.0634 28.983 22.4122C30.0884 23.7611 30.8951 25.329 31.35 27.0125H26.9125C25.9625 24.05 23.5875 21.75 20.45 21.4375V27.0125H19.95C11.4 27.0125 6.525 21.1625 6.325 11.4125Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright"> © 2026 От и До Автосервис </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    const teamSwiper = new Swiper('.team__slider',{
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 600,
+        loop: true,
+        loopFillGroupWithBlank: false,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+        navigation: {
+            nextEl: '.team__button-next',
+            prevEl: '.team__button-prev',
+        },
+        pagination: {
+            el: '.team__pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            480: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 }
+        },
+    });
+</script>
+
+<script>
+
+    const commentsSwiper = new Swiper('.comments__slider', {
+
+        slidesPerView: 1,
+        speed: 600,
+        spaceBetween: 30,
+        loopFillGroupWithBlank: false,
+        loop: true,
+
+        navigation: {
+
+            nextEl: '.comments__button-next',
+
+            prevEl: '.comments__button-prev',
+
+        },
+
+        pagination: {
+
+            el: '.comments__pagination',
+
+            clickable: true,
+
+        },
+
+        breakpoints: {
+            480: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 }
+        },
+
+    });
+
+</script>
+<script>
+
+    const faqButtons = document.querySelectorAll('.faq__button');
+
+    faqButtons.forEach(button => {
+
+        button.addEventListener('click', () => {
+
+            const faqItem = button.closest('.faq__item');
+
+            faqItem.classList.toggle('active');
+
+        });
+
+    });
+
+</script>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav--open');
+
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.nav__list a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav--open');
+            menuToggle.classList.remove('is-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>
+
+<div class="toast" id="toast">
+    <span id="toastText"></span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
