@@ -66,11 +66,11 @@ otido-service/
 
 ### Homepage
 
-![Homepage](assets/images/home.png)
+![Homepage](./assets/images/home.png)
 
 ### Reviews & FAQ
 
-![Reviews and FAQ](assets/images/reviews.png)
+![Reviews and FAQ](./assets/images/reviews.png)
 
 ## 👨‍💻 Author
 
