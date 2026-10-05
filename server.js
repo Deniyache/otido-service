@@ -6,8 +6,15 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
 
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname));
+
+// Ограничение количества заявок
 const formLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 5,
@@ -20,20 +27,45 @@ const formLimiter = rateLimit({
     }
 });
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Проверка данных формы
+function validateRequest(name, phone, comment) {
+    if (!name || name.trim().length < 2) {
+        return "Введите имя.";
+    }
 
-// папка со статикой
-app.use(express.static(__dirname));
+    const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
 
-// главная страница
+    if (!phoneRegex.test(phone)) {
+        return "Введите корректный номер телефона.";
+    }
+
+    if (comment && comment.length > 500) {
+        return "Комментарий слишком длинный.";
+    }
+
+    return null;
+}
+
+// Отправка сообщения в Telegram
+async function sendTelegramMessage(text) {
+    const url = `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`;
+
+    await axios.post(url, {
+        chat_id: process.env.CHAT_ID,
+        text
+    });
+}
+
+// Главная страница
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// Заявка на консультацию
 app.post("/consultation", formLimiter, async (req, res) => {
     const { name, phone, comment } = req.body;
 
+    // Honeypot-защита от ботов
     if (req.body.website) {
         return res.status(400).json({
             success: false,
@@ -41,71 +73,46 @@ app.post("/consultation", formLimiter, async (req, res) => {
         });
     }
 
-    if (!name || name.trim().length < 2) {
+    const validationError = validateRequest(name, phone, comment);
+
+    if (validationError) {
         return res.status(400).json({
             success: false,
-            message: "Введите имя."
-        });
-    }
-
-    const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
-
-    if (!phoneRegex.test(phone)) {
-        return res.status(400).json({
-            success: false,
-            message: "Введите корректный номер телефона."
-        });
-    }
-
-    if (comment && comment.length > 500) {
-        return res.status(400).json({
-            success: false,
-            message: "Комментарий слишком длинный."
+            message: validationError
         });
     }
 
     const text =
-        `🚗 Новая заявка!
-
-👤 Имя: ${name}
-
-📞 Телефон: ${phone}
-
-💬 Комментарий:
-${comment || "Нет"}`;
+        `🚗 Новая заявка!\n\n` +
+        `👤 Имя: ${name.trim()}\n\n` +
+        `📞 Телефон: ${phone}\n\n` +
+        `💬 Комментарий:\n${comment?.trim() || "Нет"}`;
 
     try {
+        await sendTelegramMessage(text);
 
-        await axios.post(
-            `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`,
-            {
-                chat_id: process.env.CHAT_ID,
-                text
-            }
-        );
-
-        res.json({
+        return res.json({
             success: true,
             message: "Спасибо! Мы скоро свяжемся с вами."
         });
+    } catch (error) {
+        console.error(
+            "Ошибка отправки в Telegram:",
+            error.response?.data || error.message
+        );
 
-    } catch (err) {
-
-        console.log(err.response?.data || err.message);
-
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
             message: "Ошибка отправки."
         });
-
     }
-
 });
 
+// Запись на обслуживание
 app.post("/service", formLimiter, async (req, res) => {
-
     const { name, phone, comment } = req.body;
 
+    // Honeypot-защита от ботов
     if (req.body.website) {
         return res.status(400).json({
             success: false,
@@ -113,65 +120,42 @@ app.post("/service", formLimiter, async (req, res) => {
         });
     }
 
-    if (!name || name.trim().length < 2) {
+    const validationError = validateRequest(name, phone, comment);
+
+    if (validationError) {
         return res.status(400).json({
             success: false,
-            message: "Введите имя."
+            message: validationError
         });
     }
 
-    const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
-
-    if (!phoneRegex.test(phone)) {
-        return res.status(400).json({
-            success: false,
-            message: "Введите корректный номер телефона."
-        });
-    }
-
-    if (comment && comment.length > 500) {
-        return res.status(400).json({
-            success: false,
-            message: "Комментарий слишком длинный."
-        });
-    }
-
-    const text = `
-🔧 Новая запись в сервис
-
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-💬 Комментарий: ${comment || "Нет"}
-`;
+    const text =
+        `🔧 Новая запись в сервис\n\n` +
+        `👤 Имя: ${name.trim()}\n` +
+        `📞 Телефон: ${phone}\n` +
+        `💬 Комментарий: ${comment?.trim() || "Нет"}`;
 
     try {
+        await sendTelegramMessage(text);
 
-        await axios.post(
-            `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`,
-            {
-                chat_id: process.env.CHAT_ID,
-                text
-            }
-        );
-
-        res.json({
+        return res.json({
             success: true,
             message: "Вы успешно записались!"
         });
-
     } catch (error) {
+        console.error(
+            "Ошибка отправки в Telegram:",
+            error.response?.data || error.message
+        );
 
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
             message: "Ошибка отправки."
         });
-
     }
-
 });
 
-// запуск сервера
-app.listen(PORT, "0.0.0.0",() => {
-    console.log(`Сервер запущен: http://localhost:${PORT}`);
+// Запуск сервера
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Сервер запущен на порту ${PORT}`);
 });
-
