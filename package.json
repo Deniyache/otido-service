@@ -1,14 +1,18 @@
 {
-  "name": "myproject17.03.26",
+  "name": "otido-service",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Full-stack website for an auto repair service",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "auto-service",
+    "website",
+    "nodejs",
+    "express"
+  ],
+  "author": "Deniyache",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
