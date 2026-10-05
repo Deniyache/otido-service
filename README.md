@@ -62,6 +62,16 @@ otido-service/
 ├── package.json
 └── server.js
 
+## 📸 Preview
+
+### Homepage
+
+![Homepage](assets/images/home.png)
+
+### Reviews & FAQ
+
+![Reviews and FAQ](assets/images/reviews.png)
+
 ## 👨‍💻 Author
 
 Deniyache
